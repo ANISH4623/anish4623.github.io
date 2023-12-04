@@ -6,10 +6,23 @@ $(document).ready(function () {
                     });
                 });
             }
+            $("#appointmentForm").submit(function (event) {
+                event.preventDefault(); 
+                // Perform any additional validation if needed
+
+                // Show alert on successful submission
+                showAlert("Form submitted successfully!");
+            
+            });
+
+            // Function to show an alert
+            function showAlert(message) {
+                if(!alert(message)){window.location.reload();}
+            }
     
             pulse($("#request"));
             $("#heading1").addClass("text-center");
-        });
-        function message() {
-            var Name = document.getElementById("Name").value;
-        }
+
+});
+
+    
